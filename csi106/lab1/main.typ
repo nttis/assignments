@@ -1,10 +1,19 @@
 #set page(
   paper: "a4",
   number-align: center,
+
+  header: [
+    #set text(8pt)
+    CSI106 - Lab 1
+
+    #h(1fr) SE203403
+  ]
 )
 
-#set text(font: "Libertinus Serif")
+#set text(font: "Libertinus Serif", size: 14pt)
 #set heading(numbering: "1.1. ")
+
+#show heading: set block(below: 16pt)
 
 = Exercise 1
 
@@ -188,7 +197,7 @@ The last carry is discarded. Thus, *32#sub[10] - 25#sub[10] = 7#sub[10] = 000111
 The XOR operation returns *0* if both inputs are the same and *1* if both inputs are different.
 
 #table(
-  columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+  columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
   stroke: none,
 
   [*Input 1*], [#table.vline()], [1], [0], [0], [0], [1], [1], [1], [0],
