@@ -122,8 +122,8 @@ int main() {
   // Display salary statistics
   printf("Total salary cost of the company: %.2f\n", company_salary);
   printf("Employees with allowance of 25%%: %d\n", count_25);
-  printf("Employees of allowance of 15%%: %d\n", count_15);
-  printf("Employees of allowance of 10%%: %d\n", count_10);
+  printf("Employees with allowance of 15%%: %d\n", count_15);
+  printf("Employees with allowance of 10%%: %d\n", count_10);
 
   return 0;
 }
