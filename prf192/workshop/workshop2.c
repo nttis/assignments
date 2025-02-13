@@ -62,7 +62,7 @@ float calculate_tax(float salary) {
 int main() {
   int num_employees = 0;
   int count_25 = 0, count_15 = 0, count_10 = 0;
-  float total_salary = 0;
+  float company_salary = 0;
 
   // Input the number of employees and validate it
   printf("Input the number of employees: ");
@@ -86,8 +86,8 @@ int main() {
     float basic_salary = input_basic_salary();
 
     // Function to calculate allowance
-    double allowance = calculate_allowance(basic_salary);
-    float salary_allowance = basic_salary + (basic_salary * allowance);
+    float allowance_multiplier = calculate_allowance(basic_salary);
+    float total_salary = basic_salary + (basic_salary * allowance_multiplier);
 
     // Count allowance category
     int allowance_type = allowance_category(basic_salary);
@@ -105,25 +105,26 @@ int main() {
     }
 
     // Calculate net income and income tax
-    float income_tax = calculate_tax(salary_allowance);
-    float net_income = salary_allowance - income_tax;
+    float income_tax = calculate_tax(total_salary);
+    float net_income = total_salary - income_tax;
 
-    // Update total salary
-    total_salary += net_income;
+    // Update total company salary
+    company_salary += net_income;
 
     // Display employee details
     printf("Basic salary: %.2f\n", basic_salary);
-    printf("Allowance: %.2f\n", salary_allowance);
+    printf("Allowance: %.2f\n", basic_salary * allowance_multiplier);
     printf("Tax deduction: %.2f\n", income_tax);
     printf("Net income: %.2f\n", net_income);
     printf("\n");
   }
 
   // Display salary statistics
-  printf("Total salary cost of the company: %.2f\n", total_salary);
+  printf("Total salary cost of the company: %.2f\n", company_salary);
   printf("Employees with allowance of 25%%: %d\n", count_25);
   printf("Employees of allowance of 15%%: %d\n", count_15);
   printf("Employees of allowance of 10%%: %d\n", count_10);
 
   return 0;
 }
+
