@@ -29,7 +29,7 @@ main proc
         idiv ebx
         mov x, eax
 
-        print chr$("The solution of x is: ")
+        print chr$("The solution x is: ")
         print str$(x)
         print chr$(13, 10)
 

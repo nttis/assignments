@@ -48,8 +48,9 @@ main proc
         je div_by_0_error
 
         mov eax, v1
+        cdq
         mov ebx, v2
-        div ebx
+        div ebx ; divide edx:eax by ebx
         mov temp, eax
         
         print chr$("v1 / v2 = ")

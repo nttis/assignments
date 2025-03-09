@@ -17,7 +17,7 @@ main proc
         LOCAL sum: DWORD ; Temporary storage for the sum of the 2 numbers
 
         ; Assign user input into both curr_count and original_count
-        mov curr_count, sval(input("Enter the number of times to compute the sum: "))
+        mov curr_count, sval(input("Enter the number of times to compute the sum: n = "))
         mov eax, curr_count
         mov original_count, eax
         
